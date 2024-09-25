@@ -56,3 +56,33 @@ a {
   transform-origin: bottom left;
   transform: scaleX(1);
 }
+
+@keyframes glowing-border {
+  0% {
+    box-shadow: 0 0 2px #d6cf00, 0 0 5px #d6cf00, 0 0 10px #d6cf00, 0 0 20px #d6cf00;
+  }
+  50% {
+    box-shadow: 0 0 5px #d6cf00, 0 0 10px #d6cf00, 0 0 15px #d6cf00, 0 0 25px #d6cf00;
+  }
+  100% {
+    box-shadow: 0 0 2px #d6cf00, 0 0 5px #d6cf00, 0 0 10px #d6cf00, 0 0 20px #d6cf00;
+  }
+}
+
+.glowingButton {
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid #d6cf00;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  transition: background 0.3s ease;
+  animation: glowing-border 2s infinite;
+}
+
+.glowingButton:hover {
+  background: rgba(255, 0, 0, 0.1); /* Light red background on hover */
+}
