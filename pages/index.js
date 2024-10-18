@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import NavigationBar from "@/Components/NavigationBar/NavigationBar";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
 
       <div className={styles.main}>
         <NavigationBar />
-        {/* <section className={styles.hero_section}>
+        <section className={styles.hero_section}>
           <h1>Book a Photographer</h1>
           <p>
             Connecting Artists to Opportunities – A platform where artists
@@ -38,7 +39,7 @@ export default function Home() {
               alt="right arrow"
             />
           </button>
-        </section> */}
+        </section>
       </div>
     </>
   );
