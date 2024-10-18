@@ -20,13 +20,26 @@ export default function Home() {
         />
       </Head>
 
-      <section className={styles.main}>
+      <div className={styles.main}>
         <NavigationBar />
+        {/* <section className={styles.hero_section}>
+          <h1>Book a Photographer</h1>
+          <p>
+            Connecting Artists to Opportunities – A platform where artists
+            showcase talent, network, and find gigs or work across the globe
+          </p>
 
-        <div className={styles.container}>
-         
-        </div>
-      </section>
+          <button className={`${styles.cta_button} bubble_eff`}>
+            Get Started
+            <Image
+              src="/icons/arrow_right.svg"
+              height={18}
+              width={18}
+              alt="right arrow"
+            />
+          </button>
+        </section> */}
+      </div>
     </>
   );
 }

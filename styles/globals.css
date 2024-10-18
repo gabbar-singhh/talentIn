@@ -2,7 +2,7 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --logo-primary: #9176AA;
+  --logo-primary: #7800E8;
   --logo-secondary: #FFF82E;
 
 }
@@ -17,6 +17,8 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
+
+  background-image: url(/public/img/noise.png);
 }
 
 * {
@@ -57,32 +59,40 @@ a {
   transform: scaleX(1);
 }
 
-@keyframes glowing-border {
-  0% {
-    box-shadow: 0 0 2px #d6cf00, 0 0 5px #d6cf00, 0 0 10px #d6cf00, 0 0 20px #d6cf00;
-  }
-  50% {
-    box-shadow: 0 0 5px #d6cf00, 0 0 10px #d6cf00, 0 0 15px #d6cf00, 0 0 25px #d6cf00;
-  }
-  100% {
-    box-shadow: 0 0 2px #d6cf00, 0 0 5px #d6cf00, 0 0 10px #d6cf00, 0 0 20px #d6cf00;
-  }
-}
-
-.glowingButton {
-  padding: 10px 20px;
-  background: transparent;
-  border: 2px solid #d6cf00;
-  border-radius: 8px;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  outline: none;
+.bubble_eff {
+  z-index: 1;
   position: relative;
-  transition: background 0.3s ease;
-  animation: glowing-border 2s infinite;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  background-color: hsl(236, 32%, 26%);
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
 }
 
-.glowingButton:hover {
-  background: rgba(255, 0, 0, 0.1); /* Light red background on hover */
+.bubble_eff::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: #fff;
+  transform-origin: center;
+  transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+
+.bubble_eff:hover {
+  cursor: pointer;
+  color: var(--logo-primary);
+}
+
+.bubble_eff:hover::before {
+  transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
 }

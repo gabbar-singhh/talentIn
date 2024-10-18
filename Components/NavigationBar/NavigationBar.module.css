@@ -9,6 +9,7 @@
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid #cbcbcb;
     background-color: #9176aa3b;
+    background-color: var(--logo-primary);
 }
 
 .leftside_nav {
@@ -45,29 +46,31 @@
 }
 
 .rightside_nav ul li {
-    color: var(--logo-primary);
+    color: #fff;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
 }
 
-
 .rightside_nav ul li:hover {
-    color: #a496b2;
+    color: #fff82e;
     transition: all ease-in-out 500ms;
 
+}
+
+.rightside_nav ul li:hover .chevron_down path {
+    stroke: #fff82e;
+    transition: stroke ease-in-out 500ms;
 }
 
 .dropdown_content {
     display: none;
     position: absolute;
-    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
     z-index: 1;
     margin-top: 10px;
     top: 3rem;
     right: 10rem;
     border-radius: 8px;
-
     background-color: #9176aa3b;
     padding: 1.5rem;
 }
@@ -127,20 +130,20 @@
 
 
 .cta_button {
+    font-size: 1.1rem;
     font-weight: 600;
-    color: var(--logo-primary);
-    color: var(--logo-primary);
+    padding: 0.7rem 1.5rem;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
     background-color: var(--logo-secondary);
-    padding: 0.8rem 1rem;
-    border-radius: 4px;
+    color: var(--logo-primary);
 
     display: flex;
     align-items: center;
     gap: 4px;
-    box-shadow: 3px 3px 11px 0 #d1cfd3;
+
 }
 
 .cta_button:hover {
-    background-color: #e2db28;
     transition: all ease-in-out 500ms;
 }

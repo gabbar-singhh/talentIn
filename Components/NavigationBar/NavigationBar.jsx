@@ -16,19 +16,35 @@ const NavigationBar = () => {
     <nav className={styles.main}>
       <div className={styles.leftside_nav}>
         <Link href={"/"}>
-          <img src="/logo.png" alt="talentin logo" height={50} width={50} />
+          <img
+            src="/logo-simple.svg"
+            alt="talentin logo"
+            height={40}
+            width={40}
+          />
         </Link>
       </div>
       <div className={styles.rightside_nav}>
         <ul>
-          <li className="" onClick={toogleDropdown}>
+          <li className="">
+            {/* <li className="" onClick={toogleDropdown}> */}
             Find Your Artist
-            <Image
-              src="/icons/chevron_down.svg"
-              height={20}
-              width={20}
-              alt="next arrow"
-            />
+            <svg
+              className={styles.chevron_down}
+              width="20"
+              height="20"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 18L24 30L36 18"
+                stroke="#fff"
+                stroke-width="5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </li>
           <li className="">Join Community</li>
           <li className="">Post Your Requirement</li>
@@ -113,14 +129,8 @@ const NavigationBar = () => {
             </div>
           </div>
         </div>
-        <Link href={""} className={`${styles.cta_button}`}>
-          <span>Get Started</span>
-          <Image
-            src="/icons/arrow_right.svg"
-            height={20}
-            width={20}
-            alt="next arrow"
-          />
+        <Link href={""} className={`${styles.cta_button} bubble_eff`}>
+          <span>Sign In</span>
         </Link>
       </div>
     </nav>
