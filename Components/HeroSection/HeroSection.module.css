@@ -1,0 +1,116 @@
+.heroSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 51px;
+
+    background: #FFF;
+    width: auto;
+    height: 752px;
+}
+
+.heroSection .leftSideHeroSection {
+    width: 732px;
+}
+
+.leftSideHeroSection h1 {
+    color: #3B3B3B;
+    font-family: Montserrat;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.leftSideHeroSection .briemPrimary {
+    color: #7800E8;
+    font-family: 'BriemHand', sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.leftSideHeroSection p {
+    color: #3B3B3B;
+    font-family: Montserrat;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    margin-top: 1rem;
+}
+
+.heroSection .rightSideHeroSection {}
+
+.heroSection .ctaButton {
+    margin-top: 2rem;
+    display: inline-flex;
+    padding: 14px 27px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--logo-primary);
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 1rem 0;
+    background-color: var(--logo-accent);
+
+    /*  */
+    border: 1px solid var(--logo-accent);
+}
+
+.heroSection .ctaButton:hover {
+    transition: all ease-in-out 500ms;
+    border: 1px solid var(--logo-primary);
+}
+
+.heroSection .ctaButtonArrow {
+    border-radius: 16px;
+    background: #7800E8;
+
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightSideHeroSection {}
+
+.rightSideHeroSection .galleryGrid {
+    display: flex;
+    position: relative;
+    gap: 0.5rem;
+}
+
+.rightSideHeroSection .galleryGrid::before {
+    content: "";
+    position: absolute;
+    background-image: url('/icons/hero_threeclaws.svg');
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(-7deg);
+
+    /* Change the X-Y position */
+    top: 88%;
+    left: -31%;
+
+    /* Change the size of img */
+    width: 200px;
+    height: 150px;
+}
+
+.rightSideHeroSection .galleryGridCol_1,
+.rightSideHeroSection .galleryGridCol_2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

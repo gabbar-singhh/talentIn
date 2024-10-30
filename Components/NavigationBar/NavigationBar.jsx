@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./NavigationBar.module.css";
-import { Menu, MenuItem } from "@mui/material";
 
 const NavigationBar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -13,24 +12,24 @@ const NavigationBar = () => {
   };
 
   return (
-    <nav className={styles.main}>
-      <div className={styles.leftside_nav}>
+    <nav className={styles.Main}>
+      <div className={styles.leftSideNav}>
         <Link href={"/"}>
           <img
             src="/logo-simple.svg"
             alt="talentin logo"
-            height={40}
-            width={40}
+            height={45}
+            width={45}
           />
         </Link>
       </div>
-      <div className={styles.rightside_nav}>
+      <div className={styles.rightSideNav}>
         <ul>
           <li className="">
             {/* <li className="" onClick={toogleDropdown}> */}
             Find Your Artist
             <svg
-              className={styles.chevron_down}
+              className={styles.chevronDown}
               width="20"
               height="20"
               viewBox="0 0 48 48"
@@ -39,7 +38,7 @@ const NavigationBar = () => {
             >
               <path
                 d="M12 18L24 30L36 18"
-                stroke="#fff"
+                stroke="var(--logo-primary)"
                 stroke-width="5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -52,13 +51,13 @@ const NavigationBar = () => {
 
         <div
           className={`${showDropdown && styles.showDropdownMenu} ${
-            styles.dropdown_content
+            styles.dropDownContent
           }`}
         >
           <p>Find Your People</p>
 
-          <div className={styles.dropdown_container}>
-            <div className={styles.dropdown_row_1}>
+          <div className={styles.dropDownContainer}>
+            <div className={styles.dropDownRow_1}>
               <div className={styles.category}>
                 <strong>Wedding</strong>
                 <ul>
@@ -95,7 +94,7 @@ const NavigationBar = () => {
               </div>
             </div>
 
-            <div className={styles.dropdown_row_2}>
+            <div className={styles.dropDownRow_2}>
               <div className={styles.category}>
                 <strong>Festival</strong>
                 <ul>
@@ -129,7 +128,7 @@ const NavigationBar = () => {
             </div>
           </div>
         </div>
-        <Link href={""} className={`${styles.cta_button} bubble_eff`}>
+        <Link href={""} className={`${styles.ctaButton} bubble_eff`}>
           <span>Sign In</span>
         </Link>
       </div>

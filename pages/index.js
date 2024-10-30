@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import NavigationBar from "@/Components/NavigationBar/NavigationBar";
-import Image from "next/image";
+import HeroSection from "@/Components/HeroSection/HeroSection";
 
 export default function Home() {
   return (
@@ -21,25 +21,9 @@ export default function Home() {
         />
       </Head>
 
-      <div className={styles.main}>
+      <div className={styles.Main}>
         <NavigationBar />
-        <section className={styles.hero_section}>
-          <h1>Book a Photographer</h1>
-          <p>
-            Connecting Artists to Opportunities – A platform where artists
-            showcase talent, network, and find gigs or work across the globe
-          </p>
-
-          <button className={`${styles.cta_button} bubble_eff`}>
-            Get Started
-            <Image
-              src="/icons/arrow_right.svg"
-              height={18}
-              width={18}
-              alt="right arrow"
-            />
-          </button>
-        </section>
+        <HeroSection />
       </div>
     </>
   );

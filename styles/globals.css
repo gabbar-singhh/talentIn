@@ -3,7 +3,8 @@
   --foreground: #171717;
 
   --logo-primary: #7800E8;
-  --logo-secondary: #FFF82E;
+  --logo-secondary: #f2f2f2;
+  --logo-accent: #fff82e;
 
 }
 
@@ -33,7 +34,7 @@ a {
 }
 
 .secondary_color {
-  color: var(--logo-secondary);
+  color: var(--logo-accent);
 }
 
 /* HOVER EFFECTS */
@@ -82,7 +83,7 @@ a {
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: white;
   transform-origin: center;
   transform: translate3d(50%, -50%, 0) scale3d(0, 0, 0);
   transition: transform 0.45s ease-in-out;
@@ -94,5 +95,47 @@ a {
 }
 
 .bubble_eff:hover::before {
-  transform: translate3d(50%, -50%, 0) scale3d(15, 15, 15);
+  transform: translate3d(555%, -50%, 0) scale3d(15, 15, 15);
 }
+
+@font-face {
+  font-family: 'BriemHand';
+  src: url('/fonts/BriemHand-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BriemHand';
+  src: url('/fonts/BriemHand-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BriemHand';
+  src: url('/fonts/BriemHand-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BriemHand';
+  src: url('/fonts/BriemHand-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BriemHand';
+  src: url('/fonts/BriemHand-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* 
+medium
+semibold
+bold
+extrabold
+*/
